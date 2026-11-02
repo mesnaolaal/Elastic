@@ -1,0 +1,9 @@
+# C BIDEA: ESKEMA (bigarren Filebeat). Bete ??? hutsuneak. Fitxategia: /etc/filebeat/filebeat-logak.yml
+filebeat.inputs:
+  - type: ???
+    id: web-sarbide-logak
+    paths:
+      - ???
+
+output.???:
+  hosts: ["???"]

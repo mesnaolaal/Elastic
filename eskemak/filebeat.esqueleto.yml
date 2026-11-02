@@ -1,0 +1,30 @@
+# A BIDEA: ESKEMA. Bete ??? hutsuneak. Fitxategia: /etc/filebeat/filebeat.yml
+filebeat.inputs:
+  - type: ???                  # API HTTP bat kontsultatzeko sarrera-mota
+    id: sentsoreak-api
+    interval: ???
+    request.url: ???
+    request.method: GET
+    response.split:
+      target: ???              # zerrenda duen eremua ("body." aurrizkiarekin)
+      type: array
+    processors:
+      - decode_json_fields:
+          fields: ["message"]
+          target: ???          # "" = eremuak dokumentuaren erro mailan
+          overwrite_keys: true
+          add_error_key: true
+      - drop_fields:
+          fields: [???]        # dagoeneko behar ez den eremua
+          ignore_missing: true
+
+setup.ilm.enabled: ???         # true edo false: zergatik?
+setup.template.name: ???
+setup.template.pattern: ???
+
+output.elasticsearch:
+  hosts: ["https://localhost:9200"]
+  username: "elastic"
+  password: "${ES_PASSWORD}"
+  ssl.certificate_authorities: [???]            # CA ziurtagiriaren bidea
+  index: ???

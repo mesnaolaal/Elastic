@@ -1,0 +1,11 @@
+# Kokapena: /etc/systemd/system/filebeat-logak.service
+[Unit]
+Description=Filebeat (web-logak -> Logstash)
+After=network-online.target
+
+[Service]
+ExecStart=/usr/share/filebeat/bin/filebeat --environment systemd -c /etc/filebeat/filebeat-logak.yml --path.home /usr/share/filebeat --path.config /etc/filebeat --path.data /var/lib/filebeat-logak --path.logs /var/log/filebeat-logak
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

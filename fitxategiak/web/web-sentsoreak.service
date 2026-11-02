@@ -1,0 +1,14 @@
+# Kokapena: /etc/systemd/system/web-sentsoreak.service
+# ERABILTZAILEA aldatu zure Linux erabiltzailearekin (gidan $USER erabiltzen da).
+[Unit]
+Description=Web simulatua (sentsoreak)
+After=network.target
+
+[Service]
+User=ERABILTZAILEA
+WorkingDirectory=/home/ERABILTZAILEA/web
+ExecStart=/home/ERABILTZAILEA/web/venv/bin/python web_sentsoreak.py
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

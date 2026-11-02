@@ -1,0 +1,24 @@
+site_name: Elastic Stack laborategia
+docs_dir: docs
+theme:
+  name: material
+  language: eu
+  features: [navigation.footer, content.code.copy]
+markdown_extensions:
+  - tables
+  - admonition
+  - pymdownx.superfences
+nav:
+  - Hasiera: index.md
+  - "Sarrera eta helburuak": 00-sarrera.md
+  - "0. fasea: sistema prestatu eta Elastic biltegia": 00-fasea-sistema.md
+  - "1. fasea: Elasticsearch": 01-fasea-elasticsearch.md
+  - "2. fasea: Kibana": 02-fasea-kibana.md
+  - "3. fasea: web simulatua": 03-fasea-web.md
+  - "4. fasea: A bidea, Filebeat zuzenean Elasticsearch-era": 04-fasea-A-filebeat.md
+  - "5. fasea: B bidea, Logstash eta datuen garbiketa": 05-fasea-B-logstash.md
+  - "6. fasea: C bidea, Filebeat → Logstash (json) → Elasticsearch": 06-fasea-C-filebeat-logstash.md
+  - "7. fasea: D bidea, Heartbeat eta eskuragarritasuna": 07-fasea-D-heartbeat.md
+  - "8. fasea: egiaztapena eta Kibana dashboard-a": 08-fasea-dashboard.md
+  - "Entrega eta ebaluazio-irizpideak": 09-entrega.md
+  - "Ohiko akatsak eta arazo-konponketa": 10-arazoak.md
